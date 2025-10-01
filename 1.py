@@ -27,7 +27,7 @@ class FilePath(QMainWindow, Ui_MainWindow):
 
     def on_path_choose(self):
         self.save_label.setHidden(True)
-        self.path = QFileDialog.getOpenFileName(self, 'Выбор файл', '', 'Текстовый файл (*.txt)')
+        self.path = QFileDialog.getOpenFileName(self, 'Выбор файла', '', 'Текстовый файл (*.txt)')
         if len(self.path[0]) != 0:
             self.path_label.setText(f"{self.path[0]}")
             if self.read_file():
