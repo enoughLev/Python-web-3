@@ -28,9 +28,10 @@ class FileCreator(QMainWindow, Ui_MainWindow):
 
     def on_create_click(self):
         self.path = QFileDialog.getSaveFileName(self, 'Создание файла', '', 'Текстовый файл (*.txt)')
-        with open(self.path[0], "w") as file:
-            file.close()
-        self.plain_panel.setPlainText('')
+        if len(self.path[0]) != 0:
+            with open(self.path[0], "w") as file:
+                file.close()
+            self.plain_panel.setPlainText('')
 
     def on_open_click(self):
         self.path = QFileDialog.getOpenFileName(self, 'Выбор файла', '', 'Текстовый файл (*.txt)')
@@ -41,7 +42,7 @@ class FileCreator(QMainWindow, Ui_MainWindow):
                 self.plain_panel.setPlainText(text)
 
     def on_save_click(self):
-        if self.path != "":
+        if len(self.path[0]) != 0:
             with open(self.path[0], "w") as file:
                 file.write(self.plain_panel.toPlainText())
                 file.close()
