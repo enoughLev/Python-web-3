@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_smiley">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>120</y>
+      <width>411</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_color">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>120</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Выбрать цвет</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slider_scale">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>170</y>
+      <width>101</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
